@@ -136,9 +136,9 @@ public:
 
 
 			// Rotate by x-axis now
-			MultiplyMatrixVector(triRotatedZ.p[0], triRotatedZX.p[0], matRotZ);
-			MultiplyMatrixVector(triRotatedZ.p[1], triRotatedZX.p[1], matRotZ);
-			MultiplyMatrixVector(triRotatedZ.p[2], triRotatedZX.p[2], matRotZ);
+			MultiplyMatrixVector(triRotatedZ.p[0], triRotatedZX.p[0], matRotX);
+			MultiplyMatrixVector(triRotatedZ.p[1], triRotatedZX.p[1], matRotX);
+			MultiplyMatrixVector(triRotatedZ.p[2], triRotatedZX.p[2], matRotX);
 
 
 
@@ -152,6 +152,7 @@ public:
 
 
              // Normalized Screen Space
+			// Project traingles ( FROM 3D to 2D ) 
 			MultiplyMatrixVector(triTranslated.p[0], triProjected.p[0], matProj);
 			MultiplyMatrixVector(triTranslated.p[1], triProjected.p[1], matProj);
 			MultiplyMatrixVector(triTranslated.p[2], triProjected.p[2], matProj);
@@ -191,6 +192,7 @@ int main() {
 	if (demo.ConstructConsole(256, 240, 2, 2) )
 		demo.Start();
 
+	
 	return 0;
 }
 

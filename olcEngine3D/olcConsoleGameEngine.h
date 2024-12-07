@@ -687,7 +687,7 @@ public:
 			Draw(xc - x, yc + y, c, col);//lower left left
 			Draw(xc - y, yc + x, c, col);//lower lower left
 			Draw(xc + y, yc + x, c, col);//lower lower right
-			Draw(xc + x, yc + y, c, col);//lower right right
+			Draw(xc + x, yc + y, c, col);//lower right right 
 			if (p < 0) p += 4 * x++ + 6;
 			else p += 4 * (x++ - y--) + 10;
 		}
